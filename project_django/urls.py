@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from katalog.views import show_katalog
+
+appname = 'katalog'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('example_app.urls')),
+    path('katalog/', include('katalog.urls')),
 ]
 
 # TODO: Implement Routings Here
