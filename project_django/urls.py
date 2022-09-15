@@ -22,7 +22,7 @@ from katalog.views import show_katalog
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('example_app.urls')),
-    path('katalog/', include('katalog.urls')),
+    path('katalog/', include('katalog.urls')), # oper ke urls.py di folder katalog
 ]
 
 # TODO: Implement Routings Here
