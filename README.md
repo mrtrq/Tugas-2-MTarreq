@@ -9,7 +9,7 @@ Link menuju aplikasi heroku: https://katalogdisplay.herokuapp.com/katalog/
 
 Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html;
 
-
+<img width="963" alt="bagan tugas 2" src="https://user-images.githubusercontent.com/69755166/190315195-365d0369-f67e-4886-883f-59855ed72189.png">
 
 Jelaskan kenapa menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
 Virtual environment adalah 'tempat' yang digunakan untuk menjalankan sebuah project dengan memberikan lingkungan yang terisolasi dalam ruang lingkup yang ditentukan sehingga dependency/requirements projectnya dapat dijalankan tanpa mengganggu hal-hal lainnya. Tanpa menggunakan virtual environment, aplikasi web berbasis Django tetap bisa dijalankan karena requirements yang dibutuhkan oleh aplikasi dapat diinstall di luar virtual environment. Namun, best practice dalam membuat/mengembangkan aplikasi web adalah menggunakan virtual environment agar lingkungan pengembangan sesuai dengan kebutuhan.
