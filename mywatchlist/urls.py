@@ -6,6 +6,7 @@ from mywatchlist.views import show_mywatchlist_json
 
 
 # app_name = 'katalog'
+
 urlpatterns = [
     path('', show_mywatchlist, name='show_mywatchlist'),
     path('xml/', show_mywatchlist_xml, name='show_mywatchlist_xml'),

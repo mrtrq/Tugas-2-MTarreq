@@ -6,8 +6,8 @@
             "watched": "Yes",
             "title": "Interstellar",
             "rating": 9.5,
-            "release_date": "January 20112",
-            "review": "must watch"
+            "release_date": "November 2014",
+            "review": "must watch. a movie about space exploration (science piction) "
         }
 
     },
@@ -16,10 +16,10 @@
         "pk": 2,
         "fields": {
             "watched": "Yes",
-            "title": "Interstellar",
-            "rating": 9.5,
-            "release_date": "January 20112",
-            "review": "must watch"
+            "title": "Inception",
+            "rating": 8.5,
+            "release_date": "July 2010",
+            "review": "mind bending movie, high of imagination"
         }
     },
     {
@@ -27,10 +27,10 @@
         "pk": 3,
         "fields": {
             "watched": "Yes",
-            "title": "Interstellar",
-            "rating": 9.5,
-            "release_date": "January 20112",
-            "review": "must watch"
+            "title": "Mencuri Raden Saleh",
+            "rating": 8.0,
+            "release_date": "September 2022",
+            "review": "indonesian one of a kind"
         }
     },
     {
@@ -38,10 +38,10 @@
         "pk": 4,
         "fields": {
             "watched": "Yes",
-            "title": "Interstellar",
-            "rating": 9.5,
-            "release_date": "January 20112",
-            "review": "must watch"
+            "title": "The Batman",
+            "rating": 9.0,
+            "release_date": "March 2022",
+            "review": "Amazing cinematography"
         }
     },
     {
@@ -49,10 +49,10 @@
         "pk": 5,
         "fields": {
             "watched": "Yes",
-            "title": "Interstellar",
-            "rating": 9.5,
-            "release_date": "January 20112",
-            "review": "must watch"
+            "title": "Top Gun: Maverick",
+            "rating": 9.0,
+            "release_date": "July 2022",
+            "review": "cool flight movie"
         }
     },
     {
@@ -60,10 +60,10 @@
         "pk": 6,
         "fields": {
             "watched": "Yes",
-            "title": "Interstellar",
-            "rating": 9.5,
-            "release_date": "January 20112",
-            "review": "must watch"
+            "title": "Dune",
+            "rating": 8.5,
+            "release_date": "October 2021",
+            "review": "Amazing soundtrack, uniquie story. Based on a book written by Frank Herbert"
         }
     },
     {
@@ -71,10 +71,10 @@
         "pk": 7,
         "fields": {
             "watched": "Yes",
-            "title": "Interstellar",
-            "rating": 9.5,
-            "release_date": "January 20112",
-            "review": "must watch"
+            "title": "No Time to Die",
+            "rating": 8.0,
+            "release_date": "December 2021",
+            "review": "clasic Bond movie"
         }
     },
     {
@@ -82,10 +82,10 @@
         "pk": 8,
         "fields": {
             "watched": "Yes",
-            "title": "Interstellar",
-            "rating": 9.5,
-            "release_date": "January 20112",
-            "review": "must watch"
+            "title": "Wanted",
+            "rating": 8.5,
+            "release_date": "June 2008",
+            "review": "Fun to watch"
         }
     },
     {
@@ -93,10 +93,10 @@
         "pk": 9,
         "fields": {
             "watched": "Yes",
-            "title": "Interstellar",
-            "rating": 9.5,
-            "release_date": "January 20112",
-            "review": "must watch"
+            "title": "John Wick 3",
+            "rating": 8.5,
+            "release_date": "May 2019",
+            "review": "full packed action"
         }
     },
     {
@@ -104,10 +104,10 @@
         "pk": 10,
         "fields": {
             "watched": "Yes",
-            "title": "Interstellar",
-            "rating": 9.5,
-            "release_date": "January 20112",
-            "review": "must watch"
+            "title": "Aquaman",
+            "rating": 9.0,
+            "release_date": "January 2019",
+            "review": "best DC movie in my opinion"
         }
     }
 ]
