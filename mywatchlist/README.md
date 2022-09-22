@@ -18,6 +18,10 @@ Cara saya mengimplementasi checklist pada tugas ini adalah dengan langkah-langka
 4. Membuat file html, file json berisi data yang akan ditampilkan, dan fungsi pada views.py dan menambahkan jalur menuju link yang menampilan data dengan format xml/json di urls.py
 5. Membuat tests.py yang mengembalikan respon HTTP 200 OK dan mendeploy app ke heroku agar dapat diakses secara publik
 
+Link menuju web yang sudah di deploy: https://katalogdisplay.herokuapp.com/mywatchlist/
+https://katalogdisplay.herokuapp.com/mywatchlist/html/
+https://katalogdisplay.herokuapp.com/mywatchlist/xml/
+https://katalogdisplay.herokuapp.com/mywatchlist/json/
 
 **Screenshot postman**
 
