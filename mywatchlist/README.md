@@ -15,3 +15,5 @@ Cara saya mengimplementasi checklist pada tugas ini adalah dengan langkah-langka
 3. Menambahkan jalur url ke mywatchlist pada urls.py pada project_django untuk 'reroute' jalur ke folder mywatchlist
 4. Membuat file html, file json berisi data yang akan ditampilkan, dan fungsi pada views.py dan menambahkan jalur menuju link yang menampilan data dengan format xml/json di urls.py
 5. Membuat tests.py dan mendeploy app ke heroku agar dapat diakses secara publik
+
+reference: https://www.geeksforgeeks.org/difference-between-json-and-xml/
