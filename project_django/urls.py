@@ -23,7 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('example_app.urls')),
     path('katalog/', include('katalog.urls')), # oper ke urls.py di folder katalog
-    path('mywatchlist/',include(('mywatchlist.urls','mywatchlist'), namespace='mywatchlist'))
+    path('mywatchlist/',include(('mywatchlist.urls','mywatchlist'), namespace='mywatchlist')),
+    path('todolist/', include('todolist.urls')),
 ]
 
 # TODO: Implement Routings Here
