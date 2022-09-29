@@ -1,5 +1,5 @@
 from multiprocessing.spawn import import_main_path
-from pyexpat import model
+#from pyexpat import model
 from django.db import models
 from django.contrib.auth.models import User
 

@@ -1,8 +1,8 @@
 from http import cookies
-import imp
-from multiprocessing import context
-from operator import imod
-from turtle import title
+#import imp
+#from multiprocessing import context
+#from operator import imod
+#from turtle import title
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
@@ -25,7 +25,7 @@ class TaskForm(forms.Form):
 
 @login_required(login_url='/todolist/login')
 def show_todolist(request):
-    data_todolist = Task.objects.all()
+    data_todolist = Task.objects.filter(user=request.user)
     user = request.user
     context = {
         'list_todo': data_todolist,
