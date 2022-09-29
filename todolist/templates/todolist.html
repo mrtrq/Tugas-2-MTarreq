@@ -16,12 +16,22 @@
         <th>{{todo.date}}</th>
         <th>{{todo.title}}</th>
         <th>{{todo.description}}</th>
+        <th>{{todo.is_finished}}</th>
+
+        <th><form action="/todolist/update-task/{{todo.id}}/" method = "POST">{% csrf_token %}
+            <input type="submit" value="Update status">
+          </form>  
+          </th>
+
+          <th>
+            <form action="/todolist/delete-task/{{todo.id}}/" method = "POST">{% csrf_token %}
+              <input type="submit" value="Delete">
+            </form>  
+          </th>
     </tr>
 {% endfor %}
 </table>
 <h5>Sesi terakhir login: {{ last_login }}</h5>
 <button><a href="{% url 'todolist:create_task'%}">Create Task</a></button>
 <button><a href="{% url 'todolist:logout_user' %}">Logout</a></button>
-
-
 {% endblock content %}

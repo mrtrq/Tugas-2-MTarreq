@@ -1,4 +1,5 @@
 from http import cookies
+import re
 #import imp
 #from multiprocessing import context
 #from operator import imod
@@ -15,6 +16,7 @@ from django.urls import reverse
 from django.shortcuts import redirect
 from todolist.models import Task
 from django import forms
+from django.shortcuts import get_object_or_404
 
 
 
@@ -68,13 +70,14 @@ def login_user(request):
     context = {}
     return render(request, 'login.html', context)
 
+@login_required(login_url='/todolist/login')
 def logout_user(request):
     logout(request)
     response = HttpResponseRedirect(reverse('todolist:login_user'))
     response.delete_cookie('last_login')
     return response
 
-
+@login_required(login_url='/todolist/login')
 def create_task(request):
     if request.method == "POST":
         form = TaskForm(request.POST)
@@ -87,3 +90,19 @@ def create_task(request):
         form = TaskForm()
     
     return render(request, 'create-task.html', {'form': form})
+
+@login_required(login_url='/todolist/login')
+def update_task(request, i):
+    object = get_object_or_404(Task, id=i)
+    if request.method == "POST":
+        object.is_finished = not object.is_finished
+        object.save()
+        return redirect('/todolist/')
+
+    return render(request, 'todolist.html', {'object': object})
+
+@login_required(login_url='/todolist/login')
+def delete_task(request, i):
+    temp = Task.objects.get(id=i)
+    temp.delete()
+    return redirect('/todolist/')
