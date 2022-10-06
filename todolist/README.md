@@ -65,3 +65,6 @@ Tipe-tipe CSS selector yang saya ketahui adalah:
 *, untuk semua elemen
 
 .class1.class2, digunakan untuk memilih elemen dalam class dengan nama yang sama
+
+-----------------------
+Cara saya mengimplementasi checklist pada tugas ini adalah dengan membuat halaman web menjadi lebih berwarna dengan menambahkan background color dengan menggunakan internal css pada masing-masing file html dengan syntax background-color: .... pada div class yang sebelumnya sudah dibuat, tetapi tidak hanya berhenti disitu, saya membuat gradien pada backrground color sehingga tidak terlihat teralu kosong. Kemudian, button-button yang ada juga dibuat menjadi responsif karena warna backroundnya akan berubah ketika dihover ke button tersebut. Kemudian, bagian utamanya, saya membuat card pada halaman todolist utama dengan menggunakan referensi dari web bootstrap: https://getbootstrap.com/docs/5.2/components/card/ sehingga setiap task/todolist sekarang berada di dalam cardnya masing-masing.
