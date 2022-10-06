@@ -1,5 +1,7 @@
 Tugas 4
+
 Muhammad Tarreq Maulana - PBP B
+
 Link menuju web aplikasi: https://katalogdisplay.herokuapp.com/todolist
 
 **Apa kegunaan {% csrf_token %} pada elemen form? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen form?**
@@ -16,3 +18,50 @@ Alur data dari submisi yang dilakukan oleh pengguna terjadi ketika pengguna memb
 **Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.**
 Langkah pertama dalam implementasi checklist di atas adalah melakukan start app baru yang akan membuat folder baru yang berisi beberapa file untuk kemudian diimplementasi. Kita perlu membuat sebuah class pada models.py yang berisi variabel apa saja dan jenisnya yang akan ada pada web aplikasi, setelah membuat model, perlu dilakukan makemigrations dan migrate untuk mengirim informasi models tersebut ke django. Kemudian, kita membuat serangkaian fungsi pada views.py untuk melakukan operasi-operasi seperti login, logout, tambah todolist, update status, dan hapus todolist. Setelah itu, perlu juga dilakukan implementasi 'jalur' pada urls.py. Jalur di urls.py akan memanggil fungsi yang bersesuaian pada views.py, dan untuk menampilkan isi konten ke user, perlu dibuat file-file html pada folder templates yang berisikan iterasi dan tampilan fungsi dari models.py dan views.py yang sudah dibuat
 
+-----------------------
+Tugas 5
+
+Muhammad Tarreq Maulana - PBP B
+
+Link menuju web aplikasi: https://katalogdisplay.herokuapp.com/todolist
+
+
+**Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?**
+
+Perbedaan dari Inline, Internal, dan External CSS adalah ? 
+
+Inline css adalah styling css yang diaplikasikan secara langsung pada bagian yang ingin disylting pada baris yang spesifik.
+
+Internal css adalah pengaplikasian css pada isi internal dari suatu containter, biasanya container `<div>` pada sebuah file HTML.
+
+External css adalah penggunaaan styling css dengan membuat file tersendiri untuk suatu file html yang ingin di styling. Misalkan kita mempunyai file todolit.html, maka untuk melakukan styling css dengan cakupan seluruh file html tersebut, bisa dibuat file todolist.css untuk kemudian diisi dengan syling dan customization pada halaman html tersebut.
+
+
+Apa saja kelebihan dan kekurangan dari masing-masing style?
+
+
+**Jelaskan tag HTML5 yang kamu ketahui.**
+Beberapa tag HTML 5 yang saya ketahui adalah 
+
+`<!--...-->`	digunakan untuk commenting
+
+`<!DOCTYPE>`	menunjukkan tipe the document
+
+`<div>` sebagai container untuk tag tag lainnya seperti title, heading atau paragraf
+
+`<p>` container untuk teks dengan ukuran yang panjang
+
+`<h5>` bagian dari isi konten
+
+`<abbr>`	untuk abbreviation (singkatan)
+
+
+**Jelaskan tipe-tipe CSS selector yang kamu ketahui.**
+Tipe-tipe CSS selector yang saya ketahui adalah:
+
+.class, digunakan untuk menambahkan styling css ke elemen dengan nama class yang sama
+
+#id, digunakan untuk styling kepada bagian dengan nama id yang sama 
+*, untuk semua elemen
+
+.class1.class2, digunakan untuk memilih elemen dalam class dengan nama yang sama

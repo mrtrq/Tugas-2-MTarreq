@@ -1,37 +1,46 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h5>Nama: </h5>
-<b>{{user}}</b>
+<div class="main"> 
+<h5>Nama: {{user}}</h5>
 
-<table border="3">
-    <tr>
-    <th>Date</th>
-    <th>Title</th>
-    <th>Description</th>
-    </tr>
     {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
     {% for todo in list_todo %}
-    <tr>
-        <th>{{todo.date}}</th>
-        <th>{{todo.title}}</th>
-        <th>{{todo.description}}</th>
-        <th>{{todo.is_finished}}</th>
 
-        <th><form action="/todolist/update-task/{{todo.id}}/" method = "POST">{% csrf_token %}
-            <input type="submit" value="Update status">
-          </form>  
-          </th>
-
-          <th>
-            <form action="/todolist/delete-task/{{todo.id}}/" method = "POST">{% csrf_token %}
+    <div class="col">
+      <div class="col-sm-6">
+        <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{todo.title}}</h5>
+            <p class="card-body">Here's the detail : {{todo.description}}</p>
+            <p class="card-body">Task is finished: {{todo.is_finished}}</p>
+            <p class="card-body">Date created: {{todo.date}}</p>
+            <a href="#" class="btn btn-outline-light btn-sm"><form action="/todolist/update-task/{{todo.id}}/" method = "POST">{% csrf_token %}
+              <input type="submit" value="Update status">
+              </form>
+              
+            <a href="#" class="btn btn-outline-danger btn-sm"><form action="/todolist/delete-task/{{todo.id}}/" method = "POST">{% csrf_token %}
               <input type="submit" value="Delete">
-            </form>  
-          </th>
-    </tr>
+            </form>  </a>
+          </div>
+        </div>
+      </div>
+    </div>
+   
 {% endfor %}
-</table>
+
 <h5>Sesi terakhir login: {{ last_login }}</h5>
-<button><a href="{% url 'todolist:create_task'%}">Create Task</a></button>
-<button><a href="{% url 'todolist:logout_user' %}">Logout</a></button>
+<button><a href="{% url 'todolist:create_task'%}" class="btn btn-outline-info btn-sm">Create Task</a></button>
+<button><a href="{% url 'todolist:logout_user' %}" class="btn btn-outline-danger btn-sm">Logout</a></button>
+
+</div> 
+<style>
+  .main{
+    background: linear-gradient(#51a18d, #5b8ce9);
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+  }
+  
+</style>
 {% endblock content %}
+
