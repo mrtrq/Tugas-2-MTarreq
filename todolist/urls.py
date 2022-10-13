@@ -1,5 +1,6 @@
 
 from django.urls import path
+#from symbol import parameters
 from todolist.views import register
 from todolist.views import login_user
 from todolist.views import logout_user
@@ -16,4 +17,7 @@ urlpatterns = [
     path('create-task/',create_task, name='create_task'),
     path('update-task/<int:i>/',update_task, name='update_task'),
     path('delete-task/<int:i>/',delete_task, name='delete_task'),
+    path('json/', show_json, name='show_json'),
+    path('show-ajax/', show_todolist_ajax, name='show_todolist_ajax'),
+    path('post-ajax', post_ajax_todolist, name='post_ajax_todolist'),
 ]

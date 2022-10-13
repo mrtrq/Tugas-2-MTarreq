@@ -1,4 +1,5 @@
 from http import cookies
+import json
 import re
 #import imp
 #from multiprocessing import context
@@ -12,11 +13,13 @@ from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 import datetime
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse, JsonResponse
 from django.urls import reverse
 from django.shortcuts import redirect
 from todolist.models import Task
 from django import forms
 from django.shortcuts import get_object_or_404
+from django.core import serializers
 
 
 
@@ -38,7 +41,36 @@ def show_todolist(request):
     return render(request, 'todolist.html', context)
 
 # def create_task(request):
+@login_required(login_url='/todolist/login')
+def show_json(request):
+        data_todolist = Task.objects.filter(user=request.user)
+        return HttpResponse(serializers.serialize("json", data_todolist), content_type= "application/json")
 
+@login_required(login_url='/todolist/login/')
+def show_todolist_ajax(request):
+    task_list = Task.objects.all()
+    context = {
+    'list_task': task_list,
+    'last_login': request.COOKIES['last_login']
+    }
+    return render(request, "todolist.html", context)
+
+
+def post_ajax_todolist(request):
+    if request.method == 'POST':
+        title = request.POST['title']
+        description = request.POST['description']
+
+        ins = Task(title=title, description=description)
+        ins.save()
+
+        data = {
+            "message" : 'Submitted!'
+        }
+        json_obj = json.dumps(data, indent = 4)
+
+        return JsonResponse(json.loads(json_obj))
+    return render(request, "create-task.html")
 
 
 # Create your views here.

@@ -40,7 +40,27 @@
     font-family: Arial, Helvetica, sans-serif;
     font-style: oblique;
   }
-  
 </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+    $(document).ready(function(){
+      $.get("/todolist/json", function(data) {
+        data.map((each) =>
+            $('#table').append(`<tr>
+        <td>${each.fields.title}</td>
+        <td>${each.fields.description}</td>
+        </tr>`)
+        );
+        });
+    });
+    
+  
+
+    
+</script>
+
+
 {% endblock content %}
 
